@@ -7,6 +7,7 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import * as Select from '@radix-ui/react-select';
 import { MagnifyingGlassIcon, CopyIcon, CheckIcon, DownloadIcon, ReloadIcon, HamburgerMenuIcon, Cross2Icon } from '@radix-ui/react-icons';
 import { MenuButtonStandalone as MenuButton } from '@/components/MenuButton';
+import AdBanner from '@/components/AdBanner';
 
 const categories = ['All', 'Utility', 'Finance', 'Security', 'Design', 'Developer', 'SEO', 'Writing', 'Career', 'Media', 'Business', 'Social'];
 
@@ -231,6 +232,7 @@ export default function Home() {
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-300/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       <div className="max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-8 relative">
         <MenuButton />
+        <AdBanner />
         <header className="text-center mb-6 sm:mb-10">
           <div className="inline-flex items-center justify-center w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-yellow-400 via-pink-500 to-purple-600 rounded-2xl mb-3 sm:mb-4 shadow-2xl shadow-purple-500/30 animate-pulse">
             <span className="text-3xl sm:text-4xl">⚡</span>
