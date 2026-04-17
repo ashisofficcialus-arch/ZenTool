@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   title: "ZenTool - Free Online Tools",
   description: "97+ Free Online Tools for Everyone - Age Calculator, Unit Converter, EMI Calculator, Password Generator, Image Tools, Developer Tools and more.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
