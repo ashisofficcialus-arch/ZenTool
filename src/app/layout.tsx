@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,9 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "ZenTool",
   },
+  other: {
+    monetization: "$3nbf4.com/10887229",
+  },
 };
 
 export default function RootLayout({
@@ -44,6 +48,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <ServiceWorkerRegister />
         {children}
       </body>
     </html>
