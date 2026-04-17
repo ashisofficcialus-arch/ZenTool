@@ -902,6 +902,726 @@ export default function Home() {
           <Tabs.Content value="blog" className="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-zinc-200 dark:border-zinc-800 p-4 sm:p-8 shadow-xl">
             <div className="text-center"><p className="text-zinc-500">Blog section coming soon!</p></div>
           </Tabs.Content>
+
+          <Tabs.Content value="age" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📅 Age Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate your age in years, months, and days.</p>
+            <div className="space-y-4"><input type="date" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Calculate Age</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="unit" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📏 Unit Converter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert between different units of measurement.</p>
+            <div className="space-y-4"><input type="number" placeholder="Enter value" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>Length</option><option>Weight</option><option>Temperature</option></select><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="emi" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">💰 EMI Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate your Equal Monthly Installments.</p>
+            <div className="space-y-4"><input type="number" placeholder="Principal Amount" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Interest Rate (%)" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Tenure (months)" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Calculate EMI</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="password" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-red-200/50 dark:border-red-800/50 p-5 sm:p-10 shadow-2xl shadow-red-500/10">
+            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">🔐 Password Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate secure random passwords.</p>
+            <div className="space-y-4"><input type="number" placeholder="Password Length" defaultValue={16} className="w-full p-3 border-2 border-red-200 dark:border-red-800 rounded-xl dark:bg-zinc-800" /><label className="flex items-center gap-2"><input type="checkbox" />Include Numbers</label><label className="flex items-center gap-2"><input type="checkbox" />Include Symbols</label><button className="bg-red-600 text-white px-6 py-2 rounded-xl hover:bg-red-700">Generate Password</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="text" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">✍️ Text Tools</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Transform and analyze text.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text here..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-32" /><div className="flex gap-2 flex-wrap"><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Uppercase</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Lowercase</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bgpurple-700">Reverse</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Word Count</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="image" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🖼️ Image Compressor</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Reduce image file size without losing quality.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Quality (1-100)" defaultValue={80} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Compress Image</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="url" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔗 URL Shortener</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Shorten long URLs for easy sharing.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter URL to shorten" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Shorten URL</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="qrcode" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📱 QR Code Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create QR codes from text, URLs, or data.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter text or URL" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate QR Code</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="color" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎨 Color Picker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Pick and convert colors.</p>
+            <div className="space-y-4"><input type="color" className="w-full h-16 cursor-pointer" /><input type="text" placeholder="#000000" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdf" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📄 PDF Tools</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Merge, split, and convert PDF files.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><div className="flex gap-2 flex-wrap"><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Merge</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Split</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Convert</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="plagiarism" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-pink-200/50 dark:border-pink-800/50 p-5 sm:p-10 shadow-2xl shadow-pink-500/10">
+            <h2 className="text-2xl font-bold text-pink-600 dark:text-pink-400 mb-4">🔍 Plagiarism Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check text for plagiarism.</p>
+            <div className="space-y-4"><textarea placeholder="Paste your text here..." className="w-full p-3 border-2 border-pink-200 dark:border-pink-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-pink-600 text-white px-6 py-2 rounded-xl hover:bg-pink-700">Check Plagiarism</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="grammar" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-pink-200/50 dark:border-pink-800/50 p-5 sm:p-10 shadow-2xl shadow-pink-500/10">
+            <h2 className="text-2xl font-bold text-pink-600 dark:text-pink-400 mb-4">✅ Grammar Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check and fix grammar errors.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text to check..." className="w-full p-3 border-2 border-pink-200 dark:border-pink-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-pink-600 text-white px-6 py-2 rounded-xl hover:bg-pink-700">Check Grammar</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="resume" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-orange-200/50 dark:border-orange-800/50 p-5 sm:p-10 shadow-2xl shadow-orange-500/10">
+            <h2 className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-4">📋 Resume Builder</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create professional resumes.</p>
+            <div className="space-y-4"><input type="text" placeholder="Full Name" className="w-full p-3 border-2 border-orange-200 dark:border-orange-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Email" className="w-full p-3 border-2 border-orange-200 dark:border-orange-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Phone" className="w-full p-3 border-2 border-orange-200 dark:border-orange-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Work Experience" className="w-full p-3 border-2 border-orange-200 dark:border-orange-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-orange-600 text-white px-6 py-2 rounded-xl hover:bg-orange-700">Generate Resume</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="typing" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">⌨️ Typing Speed Test</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Test your typing speed and accuracy.</p>
+            <div className="space-y-4"><div className="p-4 bg-purple-50 dark:bg-purple-900/30 rounded-xl text-lg">The quick brown fox jumps over the lazy dog.</div><textarea placeholder="Start typing here..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Start Test</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="screenshot" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📷 Screenshot to PDF</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert screenshots to PDF documents.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert to PDF</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="json" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">{} JSON Formatter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Format and validate JSON data.</p>
+            <div className="space-y-4"><textarea placeholder="Paste JSON here..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-32 font-mono text-sm" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Format JSON</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="base64" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🔢 Base64 Encoder</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Encode and decode Base64 strings.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text to encode..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-24" /><div className="flex gap-2"><button className="bg-amber-600 text-white px-4 py-2 rounded-xl hover:bg-amber-700">Encode</button><button className="bg-amber-600 text-white px-4 py-2 rounded-xl hover:bg-amber-700">Decode</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="meta" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🏷️ Meta Tag Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate SEO meta tags.</p>
+            <div className="space-y-4"><input type="text" placeholder="Page Title" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Meta Description" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800 h-24" /><input type="text" placeholder="Keywords (comma separated)" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Generate Tags</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="ip" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🌐 IP Address Finder</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Find your IP address and location.</p>
+            <div className="space-y-4"><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Find My IP</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="random" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎲 Random Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate random numbers, names, or strings.</p>
+            <div className="space-y-4"><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>Random Number</option><option>Random String</option><option>Random Name</option><option>Random Color</option></select><input type="number" placeholder="Min" defaultValue={1} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Max" defaultValue={100} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="speed" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">⚡ Website Speed Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check website loading speed.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter website URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check Speed</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="links" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔗 Broken Link Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Find broken links on your website.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter website URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check Links</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="keyword" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">📊 Keyword Density</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate keyword density in text.</p>
+            <div className="space-y-4"><input type="text" placeholder="Keyword" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Enter text..." className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Calculate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="whois" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🌍 WHOIS Lookup</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Look up domain registration information.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter domain name" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Lookup</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="minify" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📦 Code Minifier</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Minify JavaScript, CSS, and HTML.</p>
+            <div className="space-y-4"><select className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800"><option>JavaScript</option><option>CSS</option><option>HTML</option></select><textarea placeholder="Paste code here..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Minify</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="markdown" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📝 Markdown to HTML</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert Markdown to HTML.</p>
+            <div className="space-y-4"><textarea placeholder="Enter Markdown..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Convert to HTML</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="case" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">Aa Case Converter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Change text case.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /><div className="flex gap-2 flex-wrap"><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">UPPERCASE</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">lowercase</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">Title Case</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700">camelCase</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="uuid" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🎯 UUID Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate unique UUIDs.</p>
+            <div className="space-y-4"><input type="number" placeholder="Number of UUIDs" defaultValue={1} className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate UUID</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="barcode" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📊 Barcode Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate barcodes.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter value" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate Barcode</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="timezone" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🕐 Time Zone Converter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert times between time zones.</p>
+            <div className="space-y-4"><input type="datetime-local" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>UTC</option><option>EST</option><option>PST</option><option>GMT</option></select><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="countdown" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">⏱️ Countdown Timer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Set a countdown timer.</p>
+            <div className="space-y-4"><input type="number" placeholder="Hours" defaultValue={0} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Minutes" defaultValue={0} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Seconds" defaultValue={0} className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Start Timer</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="stopwatch" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">⏲️ Stopwatch</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Track elapsed time.</p>
+            <div className="space-y-4"><div className="text-6xl font-bold text-center text-purple-600">00:00:00</div><div className="flex gap-2 justify-center"><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Start</button><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Stop</button><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Reset</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="strength" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-red-200/50 dark:border-red-800/50 p-5 sm:p-10 shadow-2xl shadow-red-500/10">
+            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">🔒 Password Strength</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check password strength.</p>
+            <div className="space-y-4"><input type="password" placeholder="Enter password" className="w-full p-3 border-2 border-red-200 dark:border-red-800 rounded-xl dark:bg-zinc-800" /><div className="h-4 bg-red-200 rounded-full"><div className="h-full bg-red-500 rounded-full w-1/2"></div></div><p className="text-center">Medium Strength</p></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="ocr" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📄 Image to Text</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Extract text from images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Extract Text</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="tts" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔊 Text to Speech</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert text to speech.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text to speak..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Speak</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="stt" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎤 Speech to Text</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert speech to text.</p>
+            <div className="space-y-4"><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Start Recording</button><textarea placeholder="Transcribed text will appear here..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="ythumb" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">▶️ YouTube Thumbnail</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Download YouTube thumbnails.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter YouTube URL" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Download Thumbnail</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="video" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">📥 Video Downloader</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Download videos from websites.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter video URL" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Download Video</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="invoice" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">💵 Invoice Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create professional invoices.</p>
+            <div className="space-y-4"><input type="text" placeholder="Company Name" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Client Name" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Amount" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate Invoice</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="notes" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📒 Note Saver</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Save and manage notes.</p>
+            <div className="space-y-4"><input type="text" placeholder="Note Title" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Note content..." className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Save Note</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="currency" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">💱 Currency Converter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert between currencies.</p>
+            <div className="space-y-4"><input type="number" placeholder="Amount" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800"><option>USD</option><option>EUR</option><option>GBP</option><option>JPY</option><option>INR</option></select><select className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800"><option>EUR</option><option>USD</option><option>GBP</option><option>JPY</option><option>INR</option></select><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="gst" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">🧾 GST Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate GST and taxes.</p>
+            <div className="space-y-4"><input type="number" placeholder="Amount" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800"><option>5%</option><option>12%</option><option>18%</option><option>28%</option></select><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Calculate GST</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="discount" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">🏷️ Discount Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate discounts and final prices.</p>
+            <div className="space-y-4"><input type="number" placeholder="Original Price" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Discount %" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Calculate Discount</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pnl" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">📈 Profit & Loss</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate profit and loss.</p>
+            <div className="space-y-4"><input type="number" placeholder="Cost Price" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Selling Price" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Calculate P&L</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="loaneligible" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-green-200/50 dark:border-green-800/50 p-5 sm:p-10 shadow-2xl shadow-green-500/10">
+            <h2 className="text-2xl font-bold text-green-600 dark:text-green-400 mb-4">🏦 Loan Eligibility</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check loan eligibility.</p>
+            <div className="space-y-4"><input type="number" placeholder="Monthly Income" className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Existing EMI" defaultValue={0} className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Loan Tenure (years)" defaultValue={5} className="w-full p-3 border-2 border-green-200 dark:border-green-800 rounded-xl dark:bg-zinc-800" /><button className="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">Check Eligibility</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="binary" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🔢 Binary to Decimal</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert between binary and decimal.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter number" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><div className="flex gap-2"><button className="bg-amber-600 text-white px-4 py-2 rounded-xl hover:bg-amber-700">Binary to Decimal</button><button className="bg-amber-600 text-white px-4 py-2 rounded-xl hover:bg-amber-700">Decimal to Binary</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="palette" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎨 Color Palette</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate color palettes.</p>
+            <div className="space-y-4"><input type="color" className="w-full h-16 cursor-pointer" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate Palette</button><div className="flex gap-2 mt-4"><div className="w-12 h-12 rounded-lg" style={{backgroundColor:'#ff0000'}}></div><div className="w-12 h-12 rounded-lg" style={{backgroundColor:'#00ff00'}}></div><div className="w-12 h-12 rounded-lg" style={{backgroundColor:'#0000ff'}}></div><div className="w-12 h-12 rounded-lg" style={{backgroundColor:'#ffff00'}}></div></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="favicon" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🔖 Favicon Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate favicons for websites.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate Favicon</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="robots" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🤖 Robots.txt Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate robots.txt files.</p>
+            <div className="space-y-4"><input type="text" placeholder="Sitemap URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><label className="flex items-center gap-2"><input type="checkbox" />Allow all bots</label><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="sitemap" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🗺️ Sitemap Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate XML sitemaps.</p>
+            <div className="space-y-4"><input type="url" placeholder="Website URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Generate Sitemap</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="emailval" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📧 Email Validator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Validate email addresses.</p>
+            <div className="space-y-4"><input type="email" placeholder="Enter email address" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Validate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="username" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-rose-200/50 dark:border-rose-800/50 p-5 sm:p-10 shadow-2xl shadow-rose-500/10">
+            <h2 className="text-2xl font-bold text-rose-600 dark:text-rose-400 mb-4">👤 Username Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate unique usernames.</p>
+            <div className="space-y-4"><input type="text" placeholder="Base name (optional)" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><button className="bg-rose-600 text-white px-6 py-2 rounded-xl hover:bg-rose-700">Generate Username</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="hashtag" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-rose-200/50 dark:border-rose-800/50 p-5 sm:p-10 shadow-2xl shadow-rose-500/10">
+            <h2 className="text-2xl font-bold text-rose-600 dark:text-rose-400 mb-4">#️⃣ Hashtag Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate hashtags for social media.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter topic" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Number of hashtags" defaultValue={10} className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><button className="bg-rose-600 text-white px-6 py-2 rounded-xl hover:bg-rose-700">Generate Hashtags</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="instabio" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-rose-200/50 dark:border-rose-800/50 p-5 sm:p-10 shadow-2xl shadow-rose-500/10">
+            <h2 className="text-2xl font-bold text-rose-600 dark:text-rose-400 mb-4">📱 Instagram Bio</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate Instagram bios.</p>
+            <div className="space-y-4"><input type="text" placeholder="Your name or niche" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800"><option>Professional</option><option>Creative</option><option>Business</option><option>Personal</option></select><button className="bg-rose-600 text-white px-6 py-2 rounded-xl hover:bg-rose-700">Generate Bio</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="meme" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-rose-200/50 dark:border-rose-800/50 p-5 sm:p-10 shadow-2xl shadow-rose-500/10">
+            <h2 className="text-2xl font-bold text-rose-600 dark:text-rose-400 mb-4">😂 Meme Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create memes.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Top text" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Bottom text" className="w-full p-3 border-2 border-rose-200 dark:border-rose-800 rounded-xl dark:bg-zinc-800" /><button className="bg-rose-600 text-white px-6 py-2 rounded-xl hover:bg-rose-700">Create Meme</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="gif" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎞️ GIF Maker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create animated GIFs.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" multiple className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="FPS" defaultValue={10} className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Create GIF</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="screenrec" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎥 Screen Recorder</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Record your screen.</p>
+            <div className="space-y-4"><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Start Recording</button><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Stop Recording</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="typinganim" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">⌨️ Typing Animation</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate typing animations.</p>
+            <div className="space-y-4"><textarea placeholder="Enter text to animate..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate Animation</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="watermark" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">💧 Watermark Adder</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Add watermarks to images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Watermark text" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Watermark</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfword" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📝 PDF to Word</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert PDF to Word documents.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert to Word</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="sseditor" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">✏️ Screenshot Editor</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Edit screenshots.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><div className="flex gap-2"><button className="bg-purple-600 text-white px-4 py-2 rounded-xl">Draw</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl">Text</button><button className="bg-purple-600 text-white px-4 py-2 rounded-xl">Crop</button></div></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="imageresize" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📐 Image Resizer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Resize images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Width" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Height" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Resize</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="imagecrop" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">✂️ Image Cropper</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Crop images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Crop Image</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="imageformat" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔄 Format Converter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert image formats.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>PNG</option><option>JPG</option><option>WebP</option><option>GIF</option></select><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="videomp3" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎵 Video to MP3</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Extract audio from videos.</p>
+            <div className="space-y-4"><input type="file" accept="video/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Extract Audio</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="audiocutter" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">✂️ Audio Cutter</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Cut audio files.</p>
+            <div className="space-y-4"><input type="file" accept="audio/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Cut Audio</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="noisereduce" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🔇 Noise Reducer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Reduce background noise in audio.</p>
+            <div className="space-y-4"><input type="file" accept="audio/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Reduce Noise</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="filesize" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">💾 File Size Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Calculate file sizes.</p>
+            <div className="space-y-4"><input type="file" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Calculate Size</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="speedtest" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📶 Download Speed</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Test your internet download speed.</p>
+            <div className="space-y-4"><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Start Test</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pingtest" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🏓 Ping Tester</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Test network latency.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter host or IP" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Ping</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="dnslookup" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔍 DNS Lookup</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Look up DNS records.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter domain" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Lookup</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="httpheader" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📋 HTTP Header</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check HTTP headers.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter URL" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Get Headers</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="sslcheck" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔒 SSL Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check SSL certificate status.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter domain" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check SSL</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="uptimemon" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">⏰ Uptime Monitor</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Monitor website uptime.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter website URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Add to Monitor</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="cacheclean" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🧹 Cache Cleaner</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Clean browser cache.</p>
+            <div className="space-y-4"><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Clear Cache</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="lorem" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📜 Lorem Ipsum</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate placeholder text.</p>
+            <div className="space-y-4"><input type="number" placeholder="Number of paragraphs" defaultValue={3} className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="fakedata" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🎭 Fake Data Gen</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate fake test data.</p>
+            <div className="space-y-4"><select className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800"><option>Names</option><option>Emails</option><option>Addresses</option><option>Phone Numbers</option></select><input type="number" placeholder="Count" defaultValue={10} className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="qrscan" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📷 QR Scanner</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Scan QR codes from images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Scan QR Code</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="barcodescan" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📊 Barcode Scanner</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Scan barcodes from images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Scan Barcode</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="mdeditor" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📑 Markdown Editor</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Edit and preview Markdown.</p>
+            <div className="space-y-4"><textarea placeholder="Write Markdown..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-40" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Preview</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="diffcheck" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">⚖️ Code Diff</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Compare two code snippets.</p>
+            <div className="space-y-4"><textarea placeholder="Original code..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-24" /><textarea placeholder="New code..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Compare</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="regextest" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🔎 Regex Tester</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Test regular expressions.</p>
+            <div className="space-y-4"><input type="text" placeholder="Regex pattern" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Test string..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Test</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="crongen" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">⏲️ Cron Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate cron expressions.</p>
+            <div className="space-y-4"><select className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800"><option>Every minute</option><option>Every hour</option><option>Daily</option><option>Weekly</option><option>Monthly</option></select><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Generate Cron</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="unixtime" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">🕒 Unix Timestamp</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert Unix timestamps.</p>
+            <div className="space-y-4"><input type="number" placeholder="Unix timestamp" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="leakcheck" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-red-200/50 dark:border-red-800/50 p-5 sm:p-10 shadow-2xl shadow-red-500/10">
+            <h2 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">⚠️ Password Leak</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check if password was leaked.</p>
+            <div className="space-y-4"><input type="password" placeholder="Enter password to check" className="w-full p-3 border-2 border-red-200 dark:border-red-800 rounded-xl dark:bg-zinc-800" /><button className="bg-red-600 text-white px-6 py-2 rounded-xl hover:bg-red-700">Check Leak</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="emailheader" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📧 Email Header</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Analyze email headers.</p>
+            <div className="space-y-4"><textarea placeholder="Paste email headers..." className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800 h-32" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Analyze</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="contrast" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎗️ Color Contrast</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check color contrast ratios.</p>
+            <div className="space-y-4"><input type="color" placeholder="Background" className="w-full h-12" /><input type="color" placeholder="Text" className="w-full h-12" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Check Contrast</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="fontpair" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔤 Font Pairing</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Pair fonts together.</p>
+            <div className="space-y-4"><input type="text" placeholder="Heading font" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Body font" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Get Pairings</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="svgopt" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-amber-200/50 dark:border-amber-800/50 p-5 sm:p-10 shadow-2xl shadow-amber-500/10">
+            <h2 className="text-2xl font-bold text-amber-600 dark:text-amber-400 mb-4">📦 SVG Optimizer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Optimize SVG files.</p>
+            <div className="space-y-4"><input type="file" accept=".svg" className="w-full p-3 border-2 border-amber-200 dark:border-amber-800 rounded-xl dark:bg-zinc-800" /><button className="bg-amber-600 text-white px-6 py-2 rounded-xl hover:bg-amber-700">Optimize SVG</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="chartgen" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📈 Chart Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate charts.</p>
+            <div className="space-y-4"><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>Bar Chart</option><option>Line Chart</option><option>Pie Chart</option></select><textarea placeholder="Data (CSV format)" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate Chart</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfjpg" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🖼️ PDF to JPG</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert PDF pages to images.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert to JPG</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="jpgpdf" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📄 JPG to PDF</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert images to PDF.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" multiple className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Convert to PDF</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfprotect" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔒 PDF Password</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Protect PDF with password.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="password" placeholder="Set password" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Protect PDF</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfunlock" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔓 PDF Unlock</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Remove PDF password.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="password" placeholder="Current password" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Unlock PDF</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfpage" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔢 PDF Page Number</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Add page numbers to PDF.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Page Numbers</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="pdfrotate" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🔄 PDF Rotate</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Rotate PDF pages.</p>
+            <div className="space-y-4"><input type="file" accept=".pdf" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>90 degrees</option><option>180 degrees</option><option>270 degrees</option></select><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Rotate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="videocomp" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">📉 Video Compressor</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Compress video files.</p>
+            <div className="space-y-4"><input type="file" accept="video/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Compression level (1-100)" defaultValue={50} className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Compress</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="videotrim" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">✂️ Video Trimmer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Trim videos.</p>
+            <div className="space-y-4"><input type="file" accept="video/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="Start time (seconds)" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="End time (seconds)" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Trim</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="gifvideo" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎬 GIF to Video</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert GIF to video.</p>
+            <div className="space-y-4"><input type="file" accept="image/gif" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Convert to Video</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="audioformat" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎵 Audio Format</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Convert audio formats.</p>
+            <div className="space-y-4"><input type="file" accept="audio/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800"><option>MP3</option><option>WAV</option><option>FLAC</option><option>AAC</option></select><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Convert</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="voicechange" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-violet-200/50 dark:border-violet-800/50 p-5 sm:p-10 shadow-2xl shadow-violet-500/10">
+            <h2 className="text-2xl font-bold text-violet-600 dark:text-violet-400 mb-4">🎤 Voice Changer</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Change voice in audio.</p>
+            <div className="space-y-4"><input type="file" accept="audio/*" className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-violet-200 dark:border-violet-800 rounded-xl dark:bg-zinc-800"><option>Deep</option><option>High</option><option>Robot</option><option>Echo</option></select><button className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700">Change Voice</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="bgremover" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🖼️ BG Remover</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Remove background from images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Remove Background</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="imageblur" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">💨 Image Blur</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Blur images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><input type="range" min="0" max="100" defaultValue={50} className="w-full" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Apply Blur</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="imagesharpen" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">⚡ Sharpen Image</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Sharpen images.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Sharpen</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="collage" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🖼️ Collage Maker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create image collages.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" multiple className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><select className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800"><option>2x2</option><option>3x3</option><option>Grid</option></select><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Create Collage</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="icongenerator" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">🎨 Icon Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate app icons.</p>
+            <div className="space-y-4"><input type="file" accept="image/*" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Generate Icons</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="faviconcheck" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔍 Favicon Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check website favicon.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter website URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check Favicon</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="domainauth" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">📊 Domain Authority</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check domain authority.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter domain" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check DA</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="backlink" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔗 Backlink Checker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check backlinks.</p>
+            <div className="space-y-4"><input type="text" placeholder="Enter domain" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check Backlinks</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="googleindex" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔍 Google Index</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Check if indexed by Google.</p>
+            <div className="space-y-4"><input type="url" placeholder="Enter URL" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Check Index</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="serp" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-cyan-200/50 dark:border-cyan-800/50 p-5 sm:p-10 shadow-2xl shadow-cyan-500/10">
+            <h2 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-4">🔎 SERP Preview</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Preview search results.</p>
+            <div className="space-y-4"><input type="text" placeholder="Page title" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800" /><textarea placeholder="Meta description" className="w-full p-3 border-2 border-cyan-200 dark:border-cyan-800 rounded-xl dark:bg-zinc-800 h-24" /><button className="bg-cyan-600 text-white px-6 py-2 rounded-xl hover:bg-cyan-700">Preview</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="adsense" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">💰 AdSense Calculator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Estimate AdSense earnings.</p>
+            <div className="space-y-4"><input type="number" placeholder="Monthly page views" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="number" placeholder="CPC ($)" defaultValue={0.5} className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Calculate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="affiliate" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">🔗 Affiliate Link</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create affiliate links.</p>
+            <div className="space-y-4"><input type="url" placeholder="Product URL" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Affiliate ID" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate Link</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="emailsig" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">✉️ Email Signature</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Create email signatures.</p>
+            <div className="space-y-4"><input type="text" placeholder="Name" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Title" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><input type="text" placeholder="Company" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="businessname" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">🏢 Business Name</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate business names.</p>
+            <div className="space-y-4"><input type="text" placeholder="Keywords" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate Names</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="slogan" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">📝 Slogan Generator</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Generate marketing slogans.</p>
+            <div className="space-y-4"><input type="text" placeholder="Brand or product" className="w-full p-3 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl dark:bg-zinc-800" /><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="startupidea" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-emerald-200/50 dark:border-emerald-800/50 p-5 sm:p-10 shadow-2xl shadow-emerald-500/10">
+            <h2 className="text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-4">💡 Startup Idea</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Get startup ideas.</p>
+            <div className="space-y-4"><button className="bg-emerald-600 text-white px-6 py-2 rounded-xl hover:bg-emerald-700">Generate Idea</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="habittracker" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">✅ Habit Tracker</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Track your daily habits.</p>
+            <div className="space-y-4"><input type="text" placeholder="Habit name" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Habit</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="dailyplanner" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📅 Daily Planner</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Plan your day.</p>
+            <div className="space-y-4"><textarea placeholder="What do you need to do today?" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-40" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Save Plan</button></div>
+          </Tabs.Content>
+
+          <Tabs.Content value="todolist" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
+            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📋 To-Do List</h2>
+            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Manage your tasks.</p>
+            <div className="space-y-4"><input type="text" placeholder="Add a task" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Task</button></div>
+          </Tabs.Content>
         </Tabs.Root>
       </div>
     </div>
