@@ -1606,21 +1606,15 @@ export default function Home() {
           </Tabs.Content>
 
           <Tabs.Content value="habittracker" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
-            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">✅ Habit Tracker</h2>
-            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Track your daily habits.</p>
-            <div className="space-y-4"><input type="text" placeholder="Habit name" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Habit</button></div>
+            <HabitTracker />
           </Tabs.Content>
 
           <Tabs.Content value="dailyplanner" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
-            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📅 Daily Planner</h2>
-            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Plan your day.</p>
-            <div className="space-y-4"><textarea placeholder="What do you need to do today?" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800 h-40" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Save Plan</button></div>
+            <DailyPlanner />
           </Tabs.Content>
 
           <Tabs.Content value="todolist" className="bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-3xl border-2 border-purple-200/50 dark:border-purple-800/50 p-5 sm:p-10 shadow-2xl shadow-purple-500/10">
-            <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">📋 To-Do List</h2>
-            <p className="text-zinc-600 dark:text-zinc-300 mb-4">Manage your tasks.</p>
-            <div className="space-y-4"><input type="text" placeholder="Add a task" className="w-full p-3 border-2 border-purple-200 dark:border-purple-800 rounded-xl dark:bg-zinc-800" /><button className="bg-purple-600 text-white px-6 py-2 rounded-xl hover:bg-purple-700">Add Task</button></div>
+            <TodoListManager />
           </Tabs.Content>
         </Tabs.Root>
       </div>
