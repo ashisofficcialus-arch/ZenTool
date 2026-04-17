@@ -1,14 +1,37 @@
 'use client';
 
 import * as Dialog from '@radix-ui/react-dialog';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
 
 export function MenuButtonStandalone() {
   const [open, setOpen] = useState(false);
-  const [showContent, setShowContent] = useState<string | null>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      e.preventDefault();
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
+    };
+    window.addEventListener('beforeinstallprompt', handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
+  }, []);
 
   const menuItems = [
+    {
+      id: 'install',
+      title: 'Install App',
+      icon: (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
     {
       id: 'install',
       title: 'Install App',
@@ -60,19 +83,17 @@ export function MenuButtonStandalone() {
     },
   ];
 
-  const handleItemClick = (id: string) => {
-    if (id === 'install') {
-      const handler = (e: Event) => {
-        e.preventDefault();
-        const prompt = e as any;
-        prompt.prompt();
-        prompt.userChoice.then(({ outcome }: any) => {
-          if (outcome === 'accepted') console.log('PWA installed');
-        });
-      };
-      window.addEventListener('beforeinstallprompt', handler);
-      setTimeout(() => window.removeEventListener('beforeinstallprompt', handler), 1000);
+  const handleInstall = async () => {
+    if (deferredPrompt) {
+      await deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('PWA installed successfully');
+      }
+    } else {
+      alert('To install ZenTool:\n\n📱 Mobile: Tap Share → Add to Home Screen\n💻 Desktop: Look for install icon in address bar');
     }
+    setOpen(false);
   };
 
   return (
@@ -106,7 +127,7 @@ export function MenuButtonStandalone() {
               ) : (
                 <button
                   key={item.id}
-                  onClick={() => handleItemClick(item.id)}
+                  onClick={handleInstall}
                   className="flex items-center gap-3 w-full px-4 py-3 rounded-xl text-sm font-medium text-purple-600 hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 dark:hover:from-purple-900/50 dark:hover:to-pink-900/50 cursor-pointer transition-all"
                 >
                   <span>{item.icon}</span>
