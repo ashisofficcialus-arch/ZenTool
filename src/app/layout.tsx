@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import PWAInstallPopup from "@/components/PWAInstallPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +13,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#8b5cf6",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "ZenTool - Free Online Tools",
-  description: "Free online tools including Age Calculator, Unit Converter, EMI Calculator, Password Generator, Text Tools, Image Compressor, URL Shortener, QR Code Generator, Color Picker, and PDF Tools.",
+  description: "97+ Free Online Tools for Everyone - Age Calculator, Unit Converter, EMI Calculator, Password Generator, Image Tools, Developer Tools and more.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "ZenTool",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +40,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <PWAInstallPopup />
+      </body>
     </html>
   );
 }
